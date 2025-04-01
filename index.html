@@ -3,156 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Official homepage of Dr. Chunyi Gai, Assistant Professor at the University of Northern British Columbia.">
-    <title>Chunyi's Homepage</title>
+    <title>About | Chunyi Gai</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --primary: #055C4C;
+            --secondary: #1D4ED8;
+            --light-bg: #F8FAFC;
+            --dark-text: #1F2937;
+            --light-text: #6B7280;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            color: var(--dark-text);
             line-height: 1.6;
+            background-color: #f4f4f4;
         }
-        header {
-            background-color: #055C4C; /* Changed to the new green color */
-            color: white;
-            padding: 15px 0;
-            text-align: center;
+
+        /* Navigation */
+        nav {
+            background-color: var(--primary);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        .container {
-            width: 90%;
-            margin: 20px auto;
-            max-width: 1000px;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        .profile-container {
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #d1fae5;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        /* 姓名和职位与内容对齐 */
+        .profile-header {
+            margin-bottom: 2rem;
+            padding: 0 1.8rem; /* 与内容卡片对齐 */
+        }
+
+        .profile-name {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .profile-title {
+            color: var(--light-text);
+            font-size: 1.1rem;
+        }
+
+        /* 照片与About Me对齐的布局 */
+        .content-wrapper {
+            display: flex;
+            gap: 3rem;
             align-items: flex-start;
         }
-        .profile-details {
-            flex: 1;
-            max-width: 60%;
+
+        .text-content {
+            flex: 2;
         }
-        .profile-name {
-            font-size: 2em;
-            font-weight: bold;
-        }
+
         .profile-photo {
             flex: 1;
-            max-width: 35%;
-            text-align: right;
+            position: relative;
+            margin-top: 1rem; /* 与About Me对齐 */
         }
+
         .profile-photo img {
-            max-width: 100%;
-            height: auto;
+            width: 100%;
+            max-width: 280px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-        section {
-            margin: 20px 0;
+
+        /* 内容卡片 */
+        .content-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.8rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
+
         h2 {
-            color: #055C4C; /* Changed heading color to match the new green */
-            border-bottom: 2px solid #055C4C; /* Updated border color */
-            padding-bottom: 5px;
-            margin-bottom: 15px;
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-top: 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary);
+            margin-bottom: 1rem;
         }
-        a {
-            color: #1E90FF; /* Light blue color for all hyperlinks */
-            text-decoration: none;
+
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
         }
-        a:hover {
-            text-decoration: underline;
-            color: #0056b3; /* Darker blue on hover */
-        }
-        ul {
-            padding-left: 20px;
-        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            .profile-container {
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .content-wrapper {
                 flex-direction: column;
             }
+            
             .profile-photo {
-                text-align: center;
-                margin-bottom: 20px;
+                align-self: center;
+                margin-top: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                justify-content: center;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+            }
+            
+            .profile-name {
+                font-size: 1.8rem;
+            }
+            
+            .profile-header {
+                padding: 0 1rem;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Chunyi's Homepage</h1>
-    </header>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="about.html">About</a>
+                <a href="publications.html">Publications</a>
+                <a href="teaching.html">Teaching</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Main Content -->
     <div class="container">
-        <div class="profile-container">
-            <div class="profile-details">
-                <p class="profile-name">Chunyi Gai</p> 
-                <p>Assistant Professor at the University of Northern British Columbia<br>
-                Department: Mathematics and Statistics<br>
-                Email: <a href="mailto:chunyi.gai@unbc.ca" aria-label="Email Chunyi Gai">chunyi.gai@unbc.ca</a><br>
-                <a href="https://www.dropbox.com/scl/fi/3ua7hii4qdb5nxhft9duy/CV_Chunyi_Jan_2025.pdf?rlkey=424zn87ho4yq4yi7pr08id3fd&e=1&st=5pxz0l2x&dl=0&raw=1" target="_blank" aria-label="Download Chunyi Gai's Curriculum Vitae">Curriculum Vitae</a></p>
-                <section>
+        <!-- 姓名和职位（与内容对齐） -->
+        <div class="profile-header">
+            <h1 class="profile-name">Chunyi Gai</h1>
+            <p class="profile-title">Assistant Professor at the University of Northern British Columbia</p>
+        </div>
+
+        <!-- 照片与内容对齐的布局 -->
+        <div class="content-wrapper">
+            <div class="text-content">
+                <!-- About Me 部分 -->
+                <section class="content-card">
                     <h2>About Me</h2>
-                    <p>I was a post-doctoral fellow in the Mathematics Department at the University of British Columbia. I obtained my PhD degree at Dalhousie University in August 2021, under the supervision of <a href="https://www.mathstat.dal.ca/~tkolokol/" target="_blank" aria-label="Visit Theodore Kolokolnikov's page">Theodore Kolokolnikov</a>.</p>
+                    <p>I am currently an Assistant Professor at the University of Northern British Columbia in the Department of Mathematics and Statistics.</p>
+                    <p>I was a post-doctoral fellow in the Mathematics Department at the University of British Columbia. I obtained my PhD degree at Dalhousie University in August 2021, under the supervision of <a href="https://www.mathstat.dal.ca/~tkolokol/" target="_blank">Theodore Kolokolnikov</a>.</p>
                 </section>
-                <section>
+
+                <!-- Research 部分 -->
+                <section class="content-card">
                     <h2>Research</h2>
                     <p>My research focuses on dynamical systems and mathematical modeling, with an emphasis on pattern formation in reaction-diffusion systems using asymptotic and singular perturbation techniques.</p>
                 </section>
             </div>
+            
+            <!-- 右侧照片（与About Me对齐） -->
             <div class="profile-photo">
-                <img src="https://www.dropbox.com/scl/fi/vq9540b1gcgxjgoew9a8e/me2.jpg?rlkey=fa53255ol23sfr1ynb4ecousn&raw=1" alt="Photo of Chunyi Gai" aria-label="Chunyi Gai's profile photo">
+                <img src="https://www.dropbox.com/scl/fi/vq9540b1gcgxjgoew9a8e/me2.jpg?rlkey=fa53255ol23sfr1ynb4ecousn&raw=1" alt="Chunyi Gai">
             </div>
         </div>
-
-        <section class="publications">
-            <h2>Publications</h2>
-            <ul>
-                 <li><a href="https://www.dropbox.com/scl/fi/pp88dsqd0zbvp5r073xe3/1d_grow.pdf?rlkey=fasfplzl8cu5h7hvuh1a1xgyd&e=2&st=0sbm1q0t&raw=1" target="_blank" aria-label="An Asymptotic Analysis of Spike Self-Replication and Spike Nucleation of Reaction-Diffusion Patterns on Growing 1-D Domains">An Asymptotic Analysis of Spike Self-Replication and Spike Nucleation of Reaction-Diffusion Patterns on Growing 1-D Domains</a>, Chunyi Gai, Edgardo Villar-Sepúlveda, Alan Champneys, Michael J. Ward. (Accepted by Bulletin of Mathematical Biology)</li>
-                <li><a href="https://www.dropbox.com/scl/fi/d3kgee8463ubzgra4nl11/recurrent-and-chaotic-outbreaks-in-sir-model-div.pdf?rlkey=srgtwapwdlshinnkdjzutzati&raw=1" target="_blank" aria-label="Recurrent and Chaotic Outbreaks in SIR Model">Recurrent and Chaotic Outbreaks in SIR Model</a>, Chunyi Gai, Theodore Kolokolnikov, Jan Schrader, Vedant Sharma. (European Journal of Applied Mathematics)</li>
-                <li><a href="https://www.dropbox.com/scl/fi/tgivukgtbuzjv9j1m8phj/police.pdf?rlkey=md3o5s84kj1nkuive9lndvrrq&raw=1" target="_blank" aria-label="The Nucleation-Annihilation Behavior for Hotspot Patterns of Urban Crime with Police Deployment">The Nucleation-Annihilation Behavior for Hotspot Patterns of Urban Crime with Police Deployment</a>, Chunyi Gai, Michael Ward. (SIADS)</li>
-                <li><a href="https://www.dropbox.com/scl/fi/mfrc7frtyhmg7pf6bde3j/BZ.pdf?rlkey=jsa17vg1riqj2m3pdrxhwdegy&raw=1" target="_blank" aria-label="Localized Pattern Formation: Semi-strong Interaction Asymptotic Analysis for Three Components Model">Localized Pattern Formation: Semi-strong Interaction Asymptotic Analysis for Three Components Model</a>, Fahad Al Saadi, Chunyi Gai, Mark Nelson. (Proceedings of the Royal Society A)</li>
-                <li><a href="https://www.dropbox.com/scl/fi/340ry6i1c4fva86m8p1rn/draft_veggies-comp.pdf?rlkey=3i9xw015bbv024qt7p3cx7fs9&raw=1" target="_blank" aria-label="Resource-mediated Competition between Two Plant Species with Different Rates of Water Intake">Resource-mediated Competition between Two Plant Species with Different Rates of Water Intake</a>, Chunyi Gai, Theodore Kolokolnikov. (SIAM Journal on Applied Mathematics (SIAP), 2023)</li>
-                <li><a href="https://www.dropbox.com/scl/fi/q4o1oko1xguwxbg72tufz/novel_sch.pdf?rlkey=rhvehtp6t5w16szgmur6s2704&raw=1" target="_blank" aria-label="Spikes and Localized Patterns for a Novel Schnakenberg Model">Spikes and Localized Patterns for a Novel Schnakenberg Model in the Semi-strong Interaction Regime</a>, Fahad Alsaadi, Alan Champneys, Chunyi Gai, Theodore Kolokolnikov. (European Journal of Applied Mathematics, 2022)</li>
-                <li><a href="https://www.dropbox.com/scl/fi/3zzgxkbfothywmjyua1kl/gmnoise.pdf?rlkey=7x20lv166abx9ckoohjs0d9y4&raw=1" target="_blank" aria-label="Spike Dynamics in the Presence of Noise">Spike Dynamics in the Presence of Noise</a>, Chunyi Gai, Theodore Kolokolnikov, David Iron, John Rumsey. (SIAM Journal on Applied Dynamical Systems (SIADS), 2020)</li>
-                <li><a href="https://www.dropbox.com/scl/fi/bza7dk252e2hzu07hgr53/sir.pdf?rlkey=4yu77rzqdv947bpeebin2nb1k&raw=1" target="_blank" aria-label="Localized Outbreaks in SIR Model with Diffusion">Localized Outbreaks in SIR Model with Diffusion</a>, Chunyi Gai, David Iron, Theodore Kolokolnikov. (Journal of Mathematical Biology, 2020)</li>
-                <li><a href="https://www.dropbox.com/scl/fi/3311oj2nfxtazj8dxkf3y/vege_noise.pdf?rlkey=x2hk99yafpo1ek9v8oacruprh&raw=1" target="_blank" aria-label="Patterned Vegetation, Tipping Points, and the Rate of Climate Change">Patterned Vegetation, Tipping Points, and the Rate of Climate Change</a>, Yuxin Chen, Theodore Kolokolnikov, Justin Tzou, Chunyi Gai. (European Journal of Applied Mathematics, 2015)</li>
-                <li><a href="https://www.dropbox.com/scl/fi/rr7ed202b4fb3nzm4qgxf/keller_segel.pdf?rlkey=597ih09wvijmzdstuy7iaxamm&raw=1" target="_blank" aria-label="Qualitative Analysis of Stationary Keller-Segel Chemotaxis Models with Logistic Growth">Qualitative Analysis of Stationary Keller-Segel Chemotaxis Models with Logistic Growth</a>, Qi Wang, Jingda Yan, Chunyi Gai. (Zeitschrift für angewandte Mathematik und Physik (ZAMP), 2016)</li>
-                <li><a href="https://www.dropbox.com/scl/fi/ge3m5wrcmmloa3qbhna1x/lotka_volterra.pdf?rlkey=mgv39n5f4afzysgj69m47xrsu&raw=1" target="_blank" aria-label="Qualitative Analysis of a Lotka-Volterra Competition System with Advection">Qualitative Analysis of a Lotka-Volterra Competition System with Advection</a>, Chunyi Gai, Qi Wang, Jingda Yan. (Discrete Contin. Dyn. Syst., 2015)</li>
-            </ul>
-        </section>
-
-        <section class="teaching">
-            <h2>Teaching</h2>
-             <p><strong>At UNBC:</strong></p>
-            <ul>
-                <li>MATH 335 Introduction to Numerical Methods (2024-2025 Winter Term 1)</li>
-                <li>MATH 100 Calculus I  (2024-2025 Winter Term 2)</li>
-            </ul>
-            
-            <p><strong>At UBC:</strong></p>
-            <ul>
-                <li>MATH 307 Applied Linear Algebra (2021-2022 Winter Term 1)</li>
-                <li>MATH 221 Matrix Algebra (2022 Summer Term 1)</li>
-                <li>MATH 307 Applied Linear Algebra (2022-2024 Winter Term 1)</li>
-                <li>MATH 101 Integral Calculus with Applications (2024 Winter Term 2)</li>
-            </ul>
-
-            <p><strong>At Dalhousie:</strong></p>
-            <ul>
-                <li>MATH 2120 Method for ODEs (2018-2021 Summers)</li>
-            </ul>
-        </section>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Dr. Chunyi Gai. All rights reserved.</p>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching | Chunyi Gai</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #055C4C;
+            --secondary: #1D4ED8;
+            --light-bg: #F8FAFC;
+            --dark-text: #1F2937;
+            --light-text: #6B7280;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--dark-text);
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        nav {
+            background-color: var(--primary);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #d1fae5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .teaching {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        /* 修改点：仅将分割线颜色改为字体颜色 */
+        .teaching-title {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--dark-text); /* 改为字体颜色 */
+        }
+
+        /* 以下所有样式保持不变 */
+        .institution {
+            margin-bottom: 2rem;
+        }
+
+        .institution h3 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .institution h3::before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .teaching ul {
+            padding-left: 1.5rem;
+            margin-top: 0;
+        }
+
+        .teaching li {
+            margin-bottom: 0.6rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .teaching li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+
+        .course-code {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                justify-content: center;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="about.html">About</a>
+                <a href="publications.html">Publications</a>
+                <a href="teaching.html">Teaching</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="teaching">
+            <!-- 教学经验标题（分割线颜色已改为字体色） -->
+            <h2 class="teaching-title">Teaching Experience</h2>
+            
+            <!-- 课程列表保持不变 -->
+            <div class="institution">
+                <h3>University of Northern British Columbia (UNBC)</h3>
+                <ul>
+                    <li><span class="course-code">MATH 335</span> Introduction to Numerical Methods (2024-2025 Winter Term 1)</li>
+                    <li><span class="course-code">MATH 100</span> Calculus I (2024-2025 Winter Term 2)</li>
+                </ul>
+            </div>
+            
+            <div class="institution">
+                <h3>University of British Columbia (UBC)</h3>
+                <ul>
+                    <li><span class="course-code">MATH 307</span> Applied Linear Algebra (2021-2022 Winter Term 1)</li>
+                    <li><span class="course-code">MATH 221</span> Matrix Algebra (2022 Summer Term 1)</li>
+                    <li><span class="course-code">MATH 307</span> Applied Linear Algebra (2022-2024 Winter Term 1)</li>
+                    <li><span class="course-code">MATH 101</span> Integral Calculus with Applications (2024 Winter Term 2)</li>
+                </ul>
+            </div>
+            
+            <div class="institution">
+                <h3>Dalhousie University</h3>
+                <ul>
+                    <li><span class="course-code">MATH 2120</span> Method for ODEs (2018-2021 Summers)</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Dr. Chunyi Gai. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | Chunyi Gai</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #055C4C;
+            --secondary: #1D4ED8;
+            --light-bg: #F8FAFC;
+            --dark-text: #1F2937;
+            --light-text: #6B7280;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--dark-text);
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        nav {
+            background-color: var(--primary);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #d1fae5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .publications {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .publications h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-top: 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .publications ul {
+            padding-left: 1rem; /* 调整缩进 */
+            margin-top: 1.5rem;
+            list-style-type: none; /* 移除默认bullet */
+        }
+
+        .publications li {
+            margin-bottom: 1.2rem;
+            position: relative;
+            padding-left: 1.2rem; /* 调整bullet位置 */
+        }
+
+        .publications li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+
+        .publications a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .publications a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .publications {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                justify-content: center;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="about.html">About</a>
+                <a href="publications.html">Publications</a>
+                <a href="teaching.html">Teaching</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="publications">
+            <h2>Publications</h2>
+            <ul>
+                <li><a href="https://www.dropbox.com/scl/fi/pp88dsqd0zbvp5r073xe3/1d_grow.pdf?rlkey=fasfplzl8cu5h7hvuh1a1xgyd&e=2&st=0sbm1q0t&raw=1" target="_blank">An Asymptotic Analysis of Spike Self-Replication and Spike Nucleation of Reaction-Diffusion Patterns on Growing 1-D Domains</a>, Chunyi Gai, Edgardo Villar-Sepúlveda, Alan Champneys, Michael J. Ward. (Accepted by Bulletin of Mathematical Biology)</li>
+                <li><a href="https://www.dropbox.com/scl/fi/d3kgee8463ubzgra4nl11/recurrent-and-chaotic-outbreaks-in-sir-model-div.pdf?rlkey=srgtwapwdlshinnkdjzutzati&raw=1" target="_blank">Recurrent and Chaotic Outbreaks in SIR Model</a>, Chunyi Gai, Theodore Kolokolnikov, Jan Schrader, Vedant Sharma. (European Journal of Applied Mathematics)</li>
+                <li><a href="https://www.dropbox.com/scl/fi/tgivukgtbuzjv9j1m8phj/police.pdf?rlkey=md3o5s84kj1nkuive9lndvrrq&raw=1" target="_blank">The Nucleation-Annihilation Behavior for Hotspot Patterns of Urban Crime with Police Deployment</a>, Chunyi Gai, Michael Ward. (SIADS)</li>
+                <li><a href="https://www.dropbox.com/scl/fi/mfrc7frtyhmg7pf6bde3j/BZ.pdf?rlkey=jsa17vg1riqj2m3pdrxhwdegy&raw=1" target="_blank">Localized Pattern Formation: Semi-strong Interaction Asymptotic Analysis for Three Components Model</a>, Fahad Al Saadi, Chunyi Gai, Mark Nelson. (Proceedings of the Royal Society A)</li>
+                <li><a href="https://www.dropbox.com/scl/fi/340ry6i1c4fva86m8p1rn/draft_veggies-comp.pdf?rlkey=3i9xw015bbv024qt7p3cx7fs9&raw=1" target="_blank">Resource-mediated Competition between Two Plant Species with Different Rates of Water Intake</a>, Chunyi Gai, Theodore Kolokolnikov. (SIAM Journal on Applied Mathematics (SIAP), 2023)</li>
+                <li><a href="https://www.dropbox.com/scl/fi/q4o1oko1xguwxbg72tufz/novel_sch.pdf?rlkey=rhvehtp6t5w16szgmur6s2704&raw=1" target="_blank">Spikes and Localized Patterns for a Novel Schnakenberg Model in the Semi-strong Interaction Regime</a>, Fahad Alsaadi, Alan Champneys, Chunyi Gai, Theodore Kolokolnikov. (European Journal of Applied Mathematics, 2022)</li>
+                <li><a href="https://www.dropbox.com/scl/fi/3zzgxkbfothywmjyua1kl/gmnoise.pdf?rlkey=7x20lv166abx9ckoohjs0d9y4&raw=1" target="_blank">Spike Dynamics in the Presence of Noise</a>, Chunyi Gai, Theodore Kolokolnikov, David Iron, John Rumsey. (SIAM Journal on Applied Dynamical Systems (SIADS), 2020)</li>
+                <li><a href="https://www.dropbox.com/scl/fi/bza7dk252e2hzu07hgr53/sir.pdf?rlkey=4yu77rzqdv947bpeebin2nb1k&raw=1" target="_blank">Localized Outbreaks in SIR Model with Diffusion</a>, Chunyi Gai, David Iron, Theodore Kolokolnikov. (Journal of Mathematical Biology, 2020)</li>
+                <li><a href="https://www.dropbox.com/scl/fi/3311oj2nfxtazj8dxkf3y/vege_noise.pdf?rlkey=x2hk99yafpo1ek9v8oacruprh&raw=1" target="_blank">Patterned Vegetation, Tipping Points, and the Rate of Climate Change</a>, Yuxin Chen, Theodore Kolokolnikov, Justin Tzou, Chunyi Gai. (European Journal of Applied Mathematics, 2015)</li>
+                <li><a href="https://www.dropbox.com/scl/fi/rr7ed202b4fb3nzm4qgxf/keller_segel.pdf?rlkey=597ih09wvijmzdstuy7iaxamm&raw=1" target="_blank">Qualitative Analysis of Stationary Keller-Segel Chemotaxis Models with Logistic Growth</a>, Qi Wang, Jingda Yan, Chunyi Gai. (Zeitschrift für angewandte Mathematik und Physik (ZAMP), 2016)</li>
+                <li><a href="https://www.dropbox.com/scl/fi/ge3m5wrcmmloa3qbhna1x/lotka_volterra.pdf?rlkey=mgv39n5f4afzysgj69m47xrsu&raw=1" target="_blank">Qualitative Analysis of a Lotka-Volterra Competition System with Advection</a>, Chunyi Gai, Qi Wang, Jingda Yan. (Discrete Contin. Dyn. Syst., 2015)</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Chunyi Gai. All rights reserved.</p>
+    </footer>
+</body>
+</html>

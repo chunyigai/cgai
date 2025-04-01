@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Chunyi Gai</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #055C4C;
+            --secondary: #1D4ED8;
+            --light-bg: #F8FAFC;
+            --dark-text: #1F2937;
+            --light-text: #6B7280;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--dark-text);
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--primary);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #d1fae5;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        /* 姓名和职位与内容对齐 */
+        .profile-header {
+            margin-bottom: 2rem;
+            padding: 0 1.8rem; /* 与内容卡片对齐 */
+        }
+
+        .profile-name {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .profile-title {
+            color: var(--light-text);
+            font-size: 1.1rem;
+        }
+
+        /* 照片与About Me对齐的布局 */
+        .content-wrapper {
+            display: flex;
+            gap: 3rem;
+            align-items: flex-start;
+        }
+
+        .text-content {
+            flex: 2;
+        }
+
+        .profile-photo {
+            flex: 1;
+            position: relative;
+            margin-top: 1rem; /* 与About Me对齐 */
+        }
+
+        .profile-photo img {
+            width: 100%;
+            max-width: 280px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* 内容卡片 */
+        .content-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.8rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-top: 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .content-wrapper {
+                flex-direction: column;
+            }
+            
+            .profile-photo {
+                align-self: center;
+                margin-top: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                justify-content: center;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+            }
+            
+            .profile-name {
+                font-size: 1.8rem;
+            }
+            
+            .profile-header {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="about.html">About</a>
+                <a href="publications.html">Publications</a>
+                <a href="teaching.html">Teaching</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- 姓名和职位（与内容对齐） -->
+        <div class="profile-header">
+            <h1 class="profile-name">Chunyi Gai</h1>
+            <p class="profile-title">Assistant Professor at the University of Northern British Columbia</p>
+        </div>
+
+        <!-- 照片与内容对齐的布局 -->
+        <div class="content-wrapper">
+            <div class="text-content">
+                <!-- About Me 部分 -->
+                <section class="content-card">
+                    <h2>About Me</h2>
+                    <p>I am currently an Assistant Professor at the University of Northern British Columbia in the Department of Mathematics and Statistics.</p>
+                    <p>I was a post-doctoral fellow in the Mathematics Department at the University of British Columbia. I obtained my PhD degree at Dalhousie University in August 2021, under the supervision of <a href="https://www.mathstat.dal.ca/~tkolokol/" target="_blank">Theodore Kolokolnikov</a>.</p>
+                </section>
+
+                <!-- Research 部分 -->
+                <section class="content-card">
+                    <h2>Research</h2>
+                    <p>My research focuses on dynamical systems and mathematical modeling, with an emphasis on pattern formation in reaction-diffusion systems using asymptotic and singular perturbation techniques.</p>
+                </section>
+            </div>
+            
+            <!-- 右侧照片（与About Me对齐） -->
+            <div class="profile-photo">
+                <img src="https://www.dropbox.com/scl/fi/vq9540b1gcgxjgoew9a8e/me2.jpg?rlkey=fa53255ol23sfr1ynb4ecousn&raw=1" alt="Chunyi Gai">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Dr. Chunyi Gai. All rights reserved.</p>
+    </footer>
+</body>
+</html>

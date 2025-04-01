@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Chunyi Gai</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #055C4C; /* 图片中的墨绿色 */
+            --secondary: #1D4ED8;
+            --light-bg: #F8FAFC;
+            --dark-text: #1F2937;
+            --light-text: #6B7280;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--dark-text);
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        /* 修改后的导航栏（与teaching页面一致） */
+        nav {
+            background-color: var(--primary);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #d1fae5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        /* 严格保持图片中的联系信息样式 */
+        .contact {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .contact h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-card {
+            padding: 1.5rem;
+            border-radius: 6px;
+            background-color: var(--light-bg);
+        }
+
+        .contact-card h3 {
+            color: var(--primary);
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info i {
+            color: var(--primary);
+            margin-right: 1rem;
+            font-size: 1.2rem;
+            width: 1.5rem;
+            text-align: center;
+        }
+
+        .cv-download {
+            display: inline-flex;
+            align-items: center;
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+
+        .cv-download i {
+            margin-right: 0.5rem;
+        }
+
+        /* 页脚（严格保持图片样式） */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                justify-content: center;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 修改后的导航栏（与teaching页面一致） -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="about.html">About</a>
+                <a href="publications.html">Publications</a>
+                <a href="teaching.html">Teaching</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="contact">
+            <h2>Contact Information</h2>
+            
+            <div class="contact-grid">
+                <!-- 机构信息卡片（严格保持图片布局） -->
+                <div class="contact-card">
+                    <h3>Institutional Affiliation</h3>
+                    <div class="contact-info">
+                        <i class="fas fa-university"></i>
+                        <div>
+                            <p>Department of Mathematics and Statistics</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 联系方式卡片（严格保持图片布局） -->
+                <div class="contact-card">
+                    <h3>Contact Details</h3>
+                    <div class="contact-info">
+                        <i class="fas fa-envelope"></i>
+                        <p><a href="mailto:chunyi.gai@unbc.ca">chunyi.gai@unbc.ca</a></p>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p>Office: 10-2022</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 简历下载卡片（严格保持图片布局） -->
+                <div class="contact-card">
+                    <h3>Curriculum Vitae</h3>
+                    <a href="https://www.dropbox.com/scl/fi/3ua7hii4qdb5nxhft9duy/CV_Chunyi_Jan_2025.pdf?rlkey=424zn87ho4yq4yi7pr08id3fd&e=1&st=5pxz0l2x&dl=0&raw=1" class="cv-download" target="_blank">
+                        <i class="fas fa-file-pdf"></i> Download PDF
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Dr. Chunyi Gai. All rights reserved.</p>
+    </footer>
+</body>
+</html>

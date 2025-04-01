@@ -47,14 +47,16 @@
         }
 
         .nav-links a {
-            color: white;  <!-- 这里添加了冒号 -->
-            text-decoration: none;
+            color: white;
+            text-decoration: none; /* 确保没有下划线 */
             font-weight: 500;
             transition: all 0.3s ease;
+            border-bottom: none; /* 明确移除下划线 */
         }
 
         .nav-links a:hover {
             color: #d1fae5;
+            text-decoration: none; /* 确保悬停时也没有下划线 */
         }
 
         .container {
@@ -70,17 +72,15 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
-        /* 修改点：仅将分割线颜色改为字体颜色 */
         .teaching-title {
             color: var(--primary);
             font-size: 1.5rem;
             margin-top: 0;
             margin-bottom: 1rem;
             padding-bottom: 0.5rem;
-            border-bottom: 1px solid var(--dark-text); /* 改为字体颜色 */
+            border-bottom: 1px solid var(--dark-text);
         }
 
-        /* 以下所有样式保持不变 */
         .institution {
             margin-bottom: 2rem;
         }
@@ -122,8 +122,7 @@
         }
 
         .course-code {
-            font-weight: 6
-00;
+            font-weight: 600;
             color: var(--primary);
         }
 
@@ -166,10 +165,8 @@
 
     <div class="container">
         <section class="teaching">
-            <!-- 教学经验标题（分割线颜色已改为字体色） -->
             <h2 class="teaching-title">Teaching Experience</h2>
             
-            <!-- 课程列表保持不变 -->
             <div class="institution">
                 <h3>University of Northern British Columbia (UNBC)</h3>
                 <ul>
